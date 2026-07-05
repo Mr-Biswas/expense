@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TravelLog</title>
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>✈️ TravelLog</h1>
+    <p class="subtitle">Travel Expense & Event Tracker</p>
+
+    <div class="tabs">
+
+        <button class="tab-btn active" onclick="showTab('expense', this)">
+            Expense
+        </button>
+
+        <button class="tab-btn" onclick="showTab('event', this)">
+            Event
+        </button>
+
+    </div>
+
+    <!-- Expense Form -->
+
+    <div id="expense" class="tab-content active">
+
+        <form id="expenseForm">
+
+            <label>Category</label>
+
+            <select id="category" required>
+
+                <option value="">Select Category</option>
+                <option>Food</option>
+                <option>Hotel</option>
+                <option>Cab</option>
+                <option>Train</option>
+                <option>Flight</option>
+                <option>Temple</option>
+                <option>Shopping</option>
+                <option>Miscellaneous</option>
+
+            </select>
+
+            <label>Amount</label>
+
+            <input
+                type="number"
+                id="amount"
+                placeholder="Enter Amount"
+                required
+            >
+
+            <label>Payment Mode</label>
+
+            <select id="payment">
+
+                <option>Cash</option>
+                <option>UPI</option>
+                <option>Card</option>
+
+            </select>
+
+            <label>Description</label>
+
+            <textarea
+                id="description"
+                rows="3"
+                placeholder="Example : Lunch at Dalma Restaurant"
+            ></textarea>
+
+            <button type="submit">
+                Save Expense
+            </button>
+
+        </form>
+
+    </div>
+
+    <!-- Event Form -->
+
+    <div id="event" class="tab-content">
+
+        <form id="eventForm">
+
+            <label>Event Title</label>
+
+            <input
+                type="text"
+                id="eventTitle"
+                placeholder="Visited Lingaraj Temple"
+                required
+            >
+
+            <label>Notes</label>
+
+            <textarea
+                id="eventNote"
+                rows="4"
+                placeholder="Write about your experience..."
+            ></textarea>
+
+            <button type="submit">
+
+                Save Event
+
+            </button>
+
+        </form>
+
+    </div>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
